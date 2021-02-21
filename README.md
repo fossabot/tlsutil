@@ -1,3 +1,5 @@
+[![](https://godoc.org/github.com/acacio/tlsutil?status.svg)](https://pkg.go.dev/github.com/acacio/tlsutil)
+
 # tlsutil
 TLS util functions to help with setting up client &amp; server TLS-based connections.
 
