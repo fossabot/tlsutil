@@ -58,10 +58,10 @@ func SetupClientTLS(tlstype, CA, crt, key string) (*tls.Config, error) {
 // SetupClientTLSWithCA does TLS credential setup with CA & certs
 func SetupClientTLSWithCA(CA, crt, key string) (*tls.Config, error) {
 	config := &tls.Config{}
+	config.MinVersion = tls.VersionTLS13
 	if err := AppendCertificate(config, crt, key); err != nil {
 		return nil, err
 	}
-	config.MinVersion = tls.VersionTLS13
 	config.RootCAs = AddRootCA(CA)
 	config.InsecureSkipVerify = false
 	return config, nil
