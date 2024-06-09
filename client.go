@@ -24,6 +24,7 @@ import (
 // SetupClientTLS does basic TLS credential setup
 func SetupClientTLS(tlstype, CA, crt, key string) (*tls.Config, error) {
 	config := &tls.Config{}
+	config.MinVersion = tls.VersionTLS13
 
 	// Load certs unless it's simple auth
 	if tlstype != "nocert" {
@@ -60,6 +61,7 @@ func SetupClientTLSWithCA(CA, crt, key string) (*tls.Config, error) {
 	if err := AppendCertificate(config, crt, key); err != nil {
 		return nil, err
 	}
+	config.MinVersion = tls.VersionTLS13
 	config.RootCAs = AddRootCA(CA)
 	config.InsecureSkipVerify = false
 	return config, nil

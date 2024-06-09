@@ -25,6 +25,7 @@ import (
 // SetupServerTLS does basic TLS credential setup
 func SetupServerTLS(tlstype, CA, crt, key string) (*tls.Config, error) {
 	config := &tls.Config{}
+	config.MinVersion = tls.VersionTLS13
 
 	switch tlstype {
 	case "simple":
