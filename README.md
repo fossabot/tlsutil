@@ -1,6 +1,8 @@
 [![](https://godoc.org/github.com/acacio/tlsutil?status.svg)](https://pkg.go.dev/github.com/acacio/tlsutil)
 
 # tlsutil
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Facacio%2Ftlsutil.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Facacio%2Ftlsutil?ref=badge_shield)
+
 TLS util functions to help with setting up client &amp; server TLS-based connections.
 
 ## Setup
@@ -46,3 +48,7 @@ With this library it is possible to setup several different TLS pairings:
 | **Simple TLS**<br />`"simple"`| N/A       | supported | **N/A** |
 | **Client Certs**<br />`"certs"` | N/A       | supported | Server enforces Client ID <br /> (server needs CA.crt) |
 | **Client Certs +<br />Server Verification**<br />`"verify"`| N/A | Client enforces server ID<br />(client needs CA.crt)| Enforce Client & Server ID<br />(both require CA.crt)|
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Facacio%2Ftlsutil.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Facacio%2Ftlsutil?ref=badge_large)
